@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========= VARIABLES ========== */
+:root {
+  --primary-clr: #6c467a;
+  --primary-clr-alt: #d6c0e3;
+  --second-clr: #026d85;
+  --second-clr-alt: #027c97;
+  --text-clr: #f5fdff;
+  --nav-txt-clr: var(--text-clr);
+  --text-clr-bg: #f5fdff;
+  --bg-clr: #2d4253;
+  --mobile-menu-bg-clr: #3e586d;
+  --sec-two-bg-clr: var(--mobile-menu-bg-clr);
+  --form-bg-clr: #dcf1ff70;
+  --form-focus-bg-clr: #bf93cf73;
+  --gray-clr: #f5f8fa;
+  --product-bg-clr: #364f63;
+  --bx-shadow-clr: #6d477b33;
+}
+
+/* ------------ BASE ------------ */
+body {
+  scroll-behavior: smooth;
+  font-family: "Pompiere", cursive;
+  font-size: 1.2rem;
+  color: var(--text-clr);
+  background-color: var(--bg-clr);
+  transition: background-color 1000ms;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+.pos-abs-center {
+  position: absolute;
+}
+/* ================= */
+/* -- buttons -- */
+.button {
+  cursor: pointer;
+  font-size: 1rem;
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+}
+
+.container {
+  padding: 1.8rem 3rem;
+}
+
+/* -------- HEADER -------- */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: var(--nav-txt-clr);
+  font-size: 2.3rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.nav-items {
+  display: flex;
+  margin-right: 5rem;
+}
+.nav-item {
+  margin-right: 3rem;
+}
+.nav-item:last-child {
+  margin-right: 0;
+}
+.nav-link {
+  color: var(--nav-txt-clr);
+  text-decoration: none;
+  font-size: 1.7rem;
+  position: relative;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--primary-clr-alt);
+  bottom: 0;
+  transform: scaleX(0);
+  transition: 150ms transform;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 3rem;
+  }
+  .nav-items {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  .nav-link {
+    color: var(--text-clr-bg);
+    font-size: 2rem;
+  }
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--mobile-menu-bg-clr);
+    position: absolute;
+    padding: 0.5rem 5rem 1rem 1rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    top: 5rem;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms;
+  }
+}
+
+.nav-icon {
+  cursor: pointer;
+  color: var(--nav-txt-clr);
+  font-size: 1.4rem;
+}
+
+.menu-togglers {
+  cursor: pointer;
+  display: none;
+}
+
+/* -------- SECTION ONE: Hero section -------- */
+.section-one {
+  height: 81.5vh;
+}
+.hook-title {
+  font-size: 4rem;
+  line-height: 117%;
+  max-width: 50rem;
+  color: var(--text-clr);
+  transition: font-size 1000ms;
+}
+.hook-sub_title {
+  font-size: 30px;
+  line-height: 157.5%;
+  color: var(--text-clr);
+}
+@media screen and (min-width: 414px) {
+  .hook-title {
+    font-size: 92px;
+  }
+}
+@media screen and (min-width: 358px) {
+  
+.hero-lady-img {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  transition: width 1000ms;
+}
+@media screen and (min-width: 546px) {
+  .hero-lady-img {
+    display: block;
+    width: 250px;
+  }
+}
+@media screen and (min-width: 654px) {
+  .hero-lady-img {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .hero-lady-img {
+    width: 400px;
+  }
+}
+
+.section-two {
+  background-color: var(--sec-two-bg-clr);
+}
+.s-two-upper-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.s-two-slogan {
+  font-size: 1.5rem;
+  max-width: 15rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+}
+  .s-two-slogan {
+    margin-bottom: 2rem;
+  }
+}
+.s-two-products {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  cursor: pointer;
+  /* From https://css.glass */
+  background: rgba(54, 79, 99, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  width: 100%;
+  height: calc(421 * 0.06rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 1000ms;
+}
+
+@media screen and (min-width: 700px) {
+  .product {
+    width: calc(365 * 0.06rem);
+  }
+}
+.product-one img {
+  max-width: calc(213.51 * 0.06rem);
+  transform: rotate(30deg);
+}
+.product .price {
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
+
+.product .buy-btn {
+  cursor: pointer;
+  bottom: 0;
+  left: -0.1rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  color: var(--text-clr-bg);
+}
+.product .buy-btn:hover {
+  text-decoration: underline;
+}
+.product .name {
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  color: var(--text-clr);
+}
+
+@media screen and (min-width: 515px) {
+  .s-three-upper-img-container img {
+    width: calc(400 * 0.06rem);
+  }
+}
+
+.ad-buy-btn {
+  max-width: calc(147 * 0.06rem); 
+  margin-top: 0.8rem;
+  background-color: var(--primary-clr);
+  color: var(--text-clr-bg);
+
+}
+
+/* ----- section five: promo section ----- */
+.section-five {
+  z-index: -1;
+  background: rgba(108, 70, 122, 0.1);
+}
+
+
+/* ----- footer section ----- */
+.footer-title{
+  font-size: 50px;
+}
+
+/* ---- contact form ---- */
+.contact-form {
+  margin-bottom: 3rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+.form-label {
+  color: var(--text-clr);
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+.all-input:focus {
+  box-shadow: 0 0 1px 3px var(--form-focus-bg-clr);
+}
+.normal-input {
+  height: 2.5rem;
+}
+.textarea-input {
+  padding-top: 1rem;
+  height: 250px;
+  border: black solid;
+  background-color:transparent;
+}
+.send-msg-btn {
+  width: 80%;
+  height: 3.5rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 1024px) {
+  .name-email-inputs-container {
+    display: flex;
+  }
+  .form-control {
+    margin-right: 3rem;
+  }
+  .form-label {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .normal-input {
+    width: 400px;
+  }
+  .textarea-input {
+    width: 800px;
+  }
+  .send-msg-btn {
+    height: 3.2rem;
+    font-size: 1.1rem;
+  }
+}
+  .all-input {
+    font-size: 1.2rem;
+  }
+
+  .textarea-input {
+    width: 850px;
+  }
+/* sec three */
+  .s1-three-title{
+    color: pink;
+    font-size: 52px;
+  }
+.s-three-desc s-definition{
+  font-size: 50px;
+}
