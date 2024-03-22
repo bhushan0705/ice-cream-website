@@ -65,12 +65,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  color: var(--nav-txt-clr);
-  font-size: 2.3rem;
-  text-decoration: none;
-  margin-right: 2rem;
-}
+
 .nav-items {
   display: flex;
   margin-right: 5rem;
@@ -255,7 +250,7 @@ header {
   left: -0.1rem;
   margin: 0 0 0.5rem 0;
   padding: 0.5rem 2.5rem 0.5rem 1rem;
-  color: var(--text-clr-bg);
+  color:white;
 }
 .product .buy-btn:hover {
   text-decoration: underline;
@@ -276,12 +271,16 @@ header {
 .ad-buy-btn {
   max-width: calc(147 * 0.06rem); 
   margin-top: 0.8rem;
-  background-color: var(--primary-clr);
-  color: var(--text-clr-bg);
-
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  background-color:hsl(101, 83%, 40%);
+}
+.ad-buy-btn:hover{
+  background-color:hsl(101, 83%, 50%);
 }
 
-/* ----- section five: promo section ----- */
+/* ----- section five ----- */
 .section-five {
   z-index: -1;
   background: rgba(108, 70, 122, 0.1);
@@ -360,4 +359,8 @@ header {
   }
 .s-three-desc s-definition{
   font-size: 50px;
+}
+
+#Mycolor{
+  color: white !important;
 }

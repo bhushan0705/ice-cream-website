@@ -4,7 +4,6 @@
     <head>
 <title>Ice Cream Shop </title>
       <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="styles.css">
     </head>
@@ -13,10 +12,11 @@
       <header class="container">
         <a href="#hero" class="logo">OrderCream</a>
         <nav class="navbar">
+          <!-- UNORDEREDLIST -->
           <ul class="nav-items">
             <li class="nav-item"><a href="#hero" class="nav-link clr-transition">Home</a></li>
             <li class="nav-item"><a href="#products" class="nav-link clr-transition">Product</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link clr-transition">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link clr-transition">About</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link clr-transition">Contact</a></li>
           </ul>
         </nav>
@@ -49,19 +49,19 @@
             <div class="product product-one">
               <h3 class="price pos-abs-center">50rs</h3>
               <img src="/50 rs.png" alt="ice cream with honey" loading="lazy">
-              <h3 class="buy-btn pos-abs-center">BUY</h3>
+              <h3 class="buy-btn pos-abs-center"><a id="Mycolor" href="/order.html">Buy</a></h3>
               <h3 class="name pos-abs-center">Ice cream <b>honey</b></h3>
             </div>
             <div class="product product-two">
               <h3 class="price pos-abs-center">75rs</h3>
               <img src="/75rs.jpg" alt="ice cream with honey" loading="lazy">
-              <h3 class="buy-btn pos-abs-center">BUY</h3>
+              <h3 class="buy-btn pos-abs-center"><a id="Mycolor" href="/order.html">Buy</a></h3>
               <h3 class="name pos-abs-center">Choco <b>delight</b></h3>
             </div>
             <div class="product product-three">
               <h3 class="price pos-abs-center">1000rs</h3>
               <img src="/100rs.png" alt="ice cream with honey" loading="lazy">
-              <h3 class="buy-btn pos-abs-center">BUY</h3>
+              <h3 class="buy-btn pos-abs-center"><a id="Mycolor" href="/order.html">Buy</a></h3>
               <h3 class="name pos-abs-center">Carnival <b>strawberry</b></h3>
             </div>
           </div>
@@ -76,7 +76,7 @@
             <h3 class="s1-three-title">Stress out? Try eating our ice cream.</h3>
             <p class="s-three-desc s-definition">The nearly -200 °C (-328 °F) liquid freezes the ingredients—sweet cream, flavoring, and handpicked mix-ins—almost instantaneously, creating tiny ice crystals and a smooth texture.Cool down your body with our great testy IceCream</p>
             <span class="s-three-price">JUST 50rs</span>
-            <button class="button ad-buy-btn">Buy Now</button>
+            <button class="button ad-buy-btn"><a style="text-decoration: none;" href="/order.html">Buy Now</a></button>
           </div>
         </section>
 
@@ -87,7 +87,7 @@
             <div class="promo-info-container">
               <h2 class="promo-title s-three-title">Flat 50% OFF, Hurry up before the stock ends</h2>
               <p class="promo-description s-definition">The nearly -200 °C (-328 °F) liquid freezes the ingredients—sweet cream, flavoring, and handpicked</p>
-              <button class="button ad-buy-btn promo-btn">Buy Now</button>
+              <button class="button ad-buy-btn promo-btn"><a style="text-decoration: none;" href="/order.html">Buy Now</a></button>
             </div>
           </div>
         </section>
@@ -106,17 +106,15 @@
             </div>
           </div>
 
-          <!-- text area -->
+          <!-- textarea -->
           <div class="form-control">
             <label for="message" class="form-label">Message</label>
             <div contenteditable="true" id="message" class="textarea-input all-input"></div>
           </div>
           <button type="submit" class="send-msg-btn button ad-buy-btn">SEND</button>
         </form>
-
        </div>
       </footer>
-      <script src="script.js"></script>
     </body>
 </html>
 

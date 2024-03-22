@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Order Form</title>
+    <link rel="stylesheet" href="/orderCss.css">
+</head>
+
+<body>
+    <div class="border">
+    <h1>Ice Cream Order Form</h1>
+    <form action="/submit_order" method="post">
+        <label for="flavor">Choose an ice cream flavor:</label>
+        <select id="flavor" name="flavor">
+            <option value="Ice cream honey">Ice cream honey</option>
+            <option value="Choco delight">Choco delight</option>
+            <option value="Carnival strawberry">Carnival strawberry</option>
+        </select><br>
+        <label for="quantity" aria-required="true">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+        <br>
+        <input type="submit" value="Place Order" id="orderButton">
+
+
+        <!-- javascripttttttttttt SPIDERMAN------>
+        <script>
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Your ice cream order has been placed successfully!");
+            });
+            </script>
+
+    </form>
+</div>
+</body>
+</html>
