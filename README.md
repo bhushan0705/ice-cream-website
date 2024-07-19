@@ -1,2 +1,2 @@
 # ice-cream-website
-This is a ice cream website
+This is an ice cream website
