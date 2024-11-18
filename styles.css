@@ -142,7 +142,7 @@ header {
 
 /* -------- SECTION ONE: Hero section -------- */
 .section-one {
-  height: 81.5vh;
+  height: 80vh;
 }
 .hook-title {
   font-size: 4rem;
@@ -201,6 +201,12 @@ header {
   max-width: 15rem;
   letter-spacing: 0.05rem;
   line-height: 2rem;
+}
+.logo {
+    color: pink;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 800;
 }
   .s-two-slogan {
     margin-bottom: 2rem;
